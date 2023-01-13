@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <linK rel="stylesheet" href="./estilo.css">
     <title>Calculadora</title>
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
 </head>
 <style>
     *{
@@ -14,7 +15,7 @@
     body{
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(55deg,black,#960101,black);
+    background-image: linear-gradient(55deg,black,#a00000,black);
      }
 </style>
 
@@ -31,8 +32,8 @@
     <table>
         <tr>
                 <td><button onclick="clean()" class="botao">AC</button></td>
-                <td><button onclick="tecla('%')" class="botao">%</button></td>
-                <td><button onclick="tecla('^')" class="botao">^</button></td>
+                <td><button onclick="tecla('(')" class="botao">(</button></td>
+                <td><button onclick="tecla(')')" class="botao">)</button></td>
                 <td><button onclick="tecla('/')" class="botao">/</button></td>
         </tr>
         <tr>
@@ -56,7 +57,7 @@
         <tr>
                 <td><button onclick="tecla('0')" class="botao">0</button></td>
                 <td><button onclick="tecla('.')" class="botao">.</button></td>
-                <td><button onclick="back()" class="botao">x</button></td>
+                <td><button onclick="back()" class="botao"><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
                 <td><button onclick="calcular()" class="botao">=</button></td>
         </tr>
     </table>
@@ -87,7 +88,14 @@
                 document.getElementById("resultado").innerHTML = eval(resultado);
             }
         }
+ 
+        function del(){
+            this.numeroArray.pop();
+            this.proximoNumero();
+            this.resultado;
+        }
 
+        
     </script>
 
 </body>

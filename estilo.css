@@ -72,3 +72,9 @@ color: white;
 .botao:hover{
 background: black;
 }
+
+
+.botao i{
+   font-size: 16px;
+}
+
