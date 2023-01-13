@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <linK rel="stylesheet" href="./estilo.css">
+    <title>Calculadora</title>
+</head>
+<style>
+    *{
+    box-sizing: border-box;
+     }
+    body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(55deg,black,#960101,black);
+     }
+</style>
+
+
+<body>
+    <div class="titulo">
+      <H1>Gustavo Henrique</H1>
+    </div>
+    <div class="total">
+    <div class="subtitulos">
+         <h1>Calculadora</h1>
+         <p id="resultado"></p>
+    </div>
+    <table>
+        <tr>
+                <td><button onclick="clean()" class="botao">AC</button></td>
+                <td><button onclick="tecla('%')" class="botao">%</button></td>
+                <td><button onclick="tecla('^')" class="botao">^</button></td>
+                <td><button onclick="tecla('/')" class="botao">/</button></td>
+        </tr>
+        <tr>
+                <td><button onclick="tecla('7')" class="botao">7</button></td>
+                <td><button onclick="tecla('8')" class="botao">8</button></td>
+                <td><button onclick="tecla('9')" class="botao">9</button></td>
+                <td><button onclick="tecla('*')" class="botao">*</button></td>
+        </tr>
+        <tr>
+                <td><button onclick="tecla('4')" class="botao">4</button></td>
+                <td><button onclick="tecla('5')" class="botao">5</button></td>
+                <td><button onclick="tecla('6')" class="botao">6</button></td>
+                <td><button onclick="tecla('-')" class="botao">-</button></td>
+        </tr>
+        <tr>
+                <td><button onclick="tecla('1')" class="botao">1</button></td>
+                <td><button onclick="tecla('2')" class="botao">2</button></td>
+                <td><button onclick="tecla('3')" class="botao">3</button></td>
+                <td><button onclick="tecla('+')" class="botao">+</button></td>
+        </tr>
+        <tr>
+                <td><button onclick="tecla('0')" class="botao">0</button></td>
+                <td><button onclick="tecla('.')" class="botao">.</button></td>
+                <td><button onclick="back()" class="botao">x</button></td>
+                <td><button onclick="calcular()" class="botao">=</button></td>
+        </tr>
+    </table>
+    
+
+    <script>
+        function tecla(num){
+        var numero =  document.getElementById('resultado').innerHTML;
+          document.getElementById("resultado").innerHTML = numero + num;
+        }
+
+        function clean()
+        {
+            document.getElementById("resultado").innerHTML = "";   
+        }
+
+        function back()
+        {
+            var resultado = document.getElementById("resultado").innerHTML;
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+        }
+
+        function calcular()
+        {
+            var resultado = document.getElementById("resultado").innerHTML;
+            if(resultado)
+            {
+                document.getElementById("resultado").innerHTML = eval(resultado);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

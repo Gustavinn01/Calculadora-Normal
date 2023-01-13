@@ -1,0 +1,74 @@
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.total{
+background:rgba(0, 0, 0, 0.849);
+width: 290px;
+position:absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 1px solid black;
+border-radius: 20px;
+padding:35px;
+text-align: center;
+margin-top: 30px;
+}
+
+
+.titulo{
+text-align: center;
+color: white;
+font-family: 'Kanit', sans-serif;
+animation: bounce 1s infinite alternate;
+-webkit-animation: bounce 1s infinite alternate;
+}
+.titulo:hover{
+text-shadow: 10px 10px 20px black;
+cursor: pointer;
+}
+
+
+.subtitulos h1{
+color: white;
+font-family: 'Rowdies', cursive;  
+}
+
+
+#resultado{
+background: white;
+padding: 15px;
+font-size: 20px;
+text-align: right;
+}
+
+
+.botao{
+width: 50px;
+height: 40px;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+background-color: rgba(31,31,31);
+color: white;
+}
+.botao:hover{
+background: black;
+}
